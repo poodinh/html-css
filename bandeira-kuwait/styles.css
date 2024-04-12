@@ -1,8 +1,9 @@
 html{
     padding: 10px;
+    font-size: 1vw;
 }
 :root{
-    --width-flag: 800px;
+    --width-flag: 50em;
     --height-flag: calc(var(--width-flag)/2);
 }
 html,

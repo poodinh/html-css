@@ -1,0 +1,64 @@
+html{
+    padding: 10px;
+}
+:root{
+    --width-flag: 800px;
+    --height-flag: calc(var(--width-flag)/2);
+}
+html,
+body {
+    background: white;
+    align-items: center;
+}
+
+.flag{
+    border: 1px solid black;
+    height: var(--height-flag);
+    width: var(--width-flag);
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.black-part{
+    background: black;
+    height: var(--height-flag);
+    width: calc(var(--width-flag)*0.2);
+    position: relative;
+   
+}
+.green-part{
+    background: green;
+    height: calc(var(--height-flag)/3);
+    width: calc(var(--width-flag)*0.8);
+} 
+.white-part{
+    background: white;
+    height: calc(var(--height-flag)/3);
+    width: calc(var(--width-flag)*0.8);
+    
+}
+.red-part{
+    background: red;
+    height: calc(var(--height-flag)/3);
+    width: calc(var(--width-flag)*0.8);
+    
+}
+.up-triangle {
+    border-left: calc(var(--width-flag)*0.2) solid transparent;
+    border-right: calc(var(--width-flag)*0.2) solid red;
+    border-top: calc(var(--width-flag)/6) solid transparent;
+    height: 0;
+    width: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+  }
+  .down-triangle {
+    border-left: calc(var(--width-flag)*0.2) solid transparent;
+    border-right: calc(var(--width-flag)*0.2) solid green;
+    border-bottom: calc(var(--width-flag)/6) solid transparent;
+    height: 0;
+    width: 0;
+    right: 0;
+    position: absolute;
+  }

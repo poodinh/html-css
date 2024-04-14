@@ -1,0 +1,124 @@
+
+html{
+    padding: 10px;
+    font-size: 1vw;
+}
+:root{
+    --width-card: 50%;
+    --height-card: 20em;
+}
+
+/* cartão todo */
+.card{
+    height: var(--height-card);
+    width: var(--width-card);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(221, 221, 221, 0.37);
+    padding: 0.5%;
+}
+
+/* header */
+.card_header{
+    height: calc(var(--height-card)*0.2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+/* icone da pessoa e nome */
+.icon{
+    display: flex;
+    gap: 2px;
+}
+.person{
+    border-radius: 50%;
+    height: 3vw;
+    object-fit: contain;
+}
+/* data e botão de importante */
+.date_important{
+    display: flex;
+    gap: 2px;
+}
+input[type=checkbox] {
+    display:none;
+  }
+input[type=checkbox] + label {
+    content: url('star1.png');
+    width: 2vw;
+    height: 2vw;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    cursor: hand;
+}
+input[type=checkbox]:checked +label {
+    content: url('star2.png');
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+/* body */
+.card_body{
+    height: calc(var(--height-card)*0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 3vw;
+    color: rgba(170, 169, 169, 0.705);
+}
+/* titulo e icon do nr de emails */
+.mail_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+.nr_emails{
+    display: flex;
+    color: rgb(15, 124, 167);
+    font-weight: bold;
+}
+.email_icon{
+    height: 3vw;
+    width: 3vw;
+}
+/* conteudo dos emails */
+.content{
+    margin: 0px 0px ;
+}
+
+
+/* footer */
+.card_footer{
+    height: calc(var(--height-card)*0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5%;
+}
+.email_pics{
+    height: calc(var(--height-card)*0.4);
+    width: calc(var(--height-card)*0.4);
+    object-fit: cover;
+    border-radius: 15%; 
+    opacity: 40% ;
+}
+.block_image{
+    position: relative;
+ 
+}
+.type_image{
+    position: absolute;
+    left: 35%;
+    bottom:20%;
+    font-weight: bolder;
+}
+.size_image{
+    position: absolute;
+    left: 35%;
+    bottom: 0;
+    font-weight: bolder;
+}

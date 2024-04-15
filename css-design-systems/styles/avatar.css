@@ -1,0 +1,17 @@
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.icon {
+    border-radius: 15%;
+    aspect-ratio: 1;
+}
+.lg_icon {
+    height: 48px;
+}
+.md_icon {
+    height: 32px;
+}
+.sm_icon {
+    height: 24px;
+}

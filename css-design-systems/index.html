@@ -56,11 +56,23 @@
 		<div class="wrapper">
 			<h3 class="wrapper__title">Inputs</h3>
 			<div class="wrapper__content">
-				<div class="flex">
+				<div class="flex_input">
 					<!-- Conteúdo aqui -->
-					<input type="text" placeholder="Placeholder"> 
-					<input type="text" placeholder="Placeholder"> 
-					<input type="text" placeholder="Placeholder"> 
+					<div class="flexxy">
+						<label for="no_image">Field label</label>
+						<input type="text" pattern="[a-zA-Z]+" id="no_image" placeholder="Placeholder"> 
+						<span class="error">Error label</span>
+					</div>
+					<div class="flexxy">
+						<label for="left_image">Field label</label>
+						<input type="text" pattern="[a-zA-Z]+" id="left_image" class="search before" placeholder="Placeholder">
+						<span class="error">Error label</span>
+					</div>
+					<div class="flexxy">
+						<label for="right_image">Field label</label>
+						<input type="text" pattern="[a-zA-Z]+" id="right_image" class="search after" placeholder="Placeholder"> 
+						<span class="error">Error label</span>
+					</div>
 				</div>
 			</div>
 		</div>

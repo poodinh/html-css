@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    font-family: 'Inter', sans-serif;
+    --page-background: #222;
+    --flag-width: 300px;
+    --flag-height: calc(var(--flag-width)*3/4)
+}
+
+html,
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background: var(--page-background);
+    color: white;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.flag {
+    width: var(--flag-width);
+    height: var(--flag-height);
+    background: gainsboro;
+    position: relative;
+}
+
+.flag::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, rgba(240, 240, 240, 0.271), rgba(92, 13, 13, 0.162));
+}
+
+.flag_title {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Italy */
+/* ---------------------------------------------------------------------- */
+.flag--italy{
+    display: flex;
+}
+.italy--red{
+    width: calc(var(--flag-width)/3);
+    height: 100%;
+    background-color: red;
+}
+.italy--white{
+    width: calc(var(--flag-width)/3);
+    height: 100%;
+    background-color: white;
+}
+.italy--green{
+    width: calc(var(--flag-width)/3);
+    height: 100%;
+    background-color: green;
+}
+/* ---------------------------------------------------------------------- */
+/* Ukraine */
+/* ---------------------------------------------------------------------- */
+.ukraine--blue{
+    width: 100%;
+    height: calc(var(--flag-height)/2);
+    background-color: rgb(0, 87, 184);
+}
+.ukraine--yellow{
+    width: 100%;
+    height: calc(var(--flag-height)/2);
+    background-color:rgb(255, 215, 0);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Kuwait */
+/* ---------------------------------------------------------------------- */
+
+.kuwait--black{
+    position: absolute;
+    background-color: black;
+    clip-path: polygon(0 0, 100% calc(var(--flag-height)/3), 100% calc(var(--flag-height)*2/3), 0 100%);
+    width: calc(var(--flag-width)*0.2);
+    height: 100%;
+}
+.kuwait--green{
+    width: 100%;
+    height: calc(var(--flag-height)/3);
+    background-color: rgb(0,122,61);
+}
+.kuwait--white{
+    width: 100%;
+    height: calc(var(--flag-height)/3);
+    background-color: white;
+}
+.kuwait--red{
+    width: 100%;
+    height: calc(var(--flag-height)/3);
+    background-color: rgb(206,17,38);
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Banglasdesh */
+/* ---------------------------------------------------------------------- */
+.flag--bangladesh{
+    background-color: rgb(0,106,78);
+}
+.bangladesh--red{
+    background-color: rgb(244,42,65);
+    height: calc(var(--flag-height)/2);
+    width: calc(var(--flag-height)/2);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Japan */
+/* ---------------------------------------------------------------------- */
+.flag--japan{
+    background-color: rgb(255,255,255);
+}
+.japan--red{
+    background-color: rgb(188,0,45);
+    height: calc(var(--flag-height)/2);
+    width: calc(var(--flag-height)/2);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* ---------------------------------------------------------------------- */
+/* Greece */
+/* ---------------------------------------------------------------------- */
+.greece--blue{
+    width: 100%;
+    height: calc(var(--flag-height)/9);
+    background-color: rgb(13,94,175);
+}
+.greece--white{
+    width: 100%;
+    height: calc(var(--flag-height)/9);
+    background-color: white;
+}
+.greece--square{
+    width: calc(var(--flag-height)*5/9);
+    height: calc(var(--flag-height)*5/9);
+    position: absolute;
+}
+
+.vertical{
+    height: calc(var(--flag-height)*5/9);
+    width: calc(var(--flag-height)/9);
+    left: calc(var(--flag-height)*5/18);
+    transform: translate(-50%,0%);
+    position: absolute;
+}
+.horizontal{
+    width: calc(var(--flag-height)*5/9);
+    height: calc(var(--flag-height)/9);
+    top: calc(var(--flag-height)*5/18);
+    transform: translate(0%,-50%);
+    position: absolute;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Portugal */
+/* ---------------------------------------------------------------------- */
+.flag--portugal{
+    display: flex;
+}
+.portugal--green{
+    background-color: rgb(0 102 0);
+    height: 100%;
+    width: calc(var(--flag-width)*2/5);
+}
+.portugal--yellow{
+    background-color: yellow;
+    height: calc(var(--flag-height)/2);
+    width: calc(var(--flag-height)/2);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+}
+.portugal--red{
+    background-color: rgb(255,0,0);
+    height: 100%;
+    width: calc(var(--flag-width)*3/5);
+}

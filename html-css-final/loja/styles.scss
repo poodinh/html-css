@@ -2,10 +2,10 @@ html{
     background-color: white;
     font-family: "Inter", sans-serif;
 }
-:root{
-    $orange-back:rgba(236, 184, 89, 0.555);
-    $white-letter:white;
-}
+
+$orange-back:rgba(236, 184, 89, 0.555);
+$white-letter:white;
+
 body{
     margin: 0;
 }
@@ -25,7 +25,7 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 8px;
+    padding: 2vw 1vw;
     width: 100%;
     &--rectangle{
         border-radius: 8px;
@@ -38,15 +38,17 @@ button{
         flex-direction: column;
         align-items: center;
         gap: 3px;
+        background-color: inherit;
         border: 0px;
+        .line{
+            background-color: black;
+            width: 18px;
+            min-height: 3px;
+            border-radius: 20px;
+        }
     }
 }
-.line{
-    background-color: black;
-    width: 18px;
-    min-height: 3px;
-    border-radius: 20px;
-}
+
 .banner{
     width: 100%;
     min-height: 604px;
@@ -72,7 +74,6 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     &--categories{
         display: flex;
         flex-wrap: wrap;
@@ -197,10 +198,9 @@ button{
 
 .clip{
     text-align: center;
-    padding: 7vw 10vw;
+    padding: 7vw 2vw;
     video{
         padding-bottom: 2vw;
-
     }
 }
 

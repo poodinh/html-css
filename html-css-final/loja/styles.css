@@ -25,7 +25,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 8px;
+  padding: 2vw 1vw;
   width: 100%;
 }
 .menu--rectangle {
@@ -39,11 +39,10 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 3px;
-  background-color: white;
+  background-color: inherit;
   border: 0px;
 }
-
-.line {
+.menu--sandwich .line {
   background-color: black;
   width: 18px;
   min-height: 3px;
@@ -64,7 +63,7 @@ button {
   bottom: 5%;
   left: 7%;
 }
-.banner--text {
+.banner--info p {
   color: white;
   font-size: 5.5vw;
   margin: 0px;
@@ -121,7 +120,8 @@ button {
 }
 
 .decour {
-  padding: 2vw;
+  padding-bottom: 7vw;
+  padding-left: 2vw;
   text-align: center;
 }
 .decour--image {
@@ -129,17 +129,18 @@ button {
   gap: 3vw;
   overflow-x: auto;
   justify-content: flex-start;
-  max-width: 768px;
+  max-width: 100%;
+  padding-bottom: 1vw;
 }
-.decour::-webkit-scrollbar {
+.decour ::-webkit-scrollbar {
   width: 1em;
 }
-.decour::-webkit-scrollbar-track {
+.decour ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
-.decour::-webkit-scrollbar-thumb {
+.decour ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #d62929;
+  background: rgba(236, 184, 89, 0.555);
 }
 
 .ambid {
@@ -199,7 +200,7 @@ button {
 
 .clip {
   text-align: center;
-  padding: 7vw 1vw;
+  padding: 7vw 2vw;
 }
 .clip video {
   padding-bottom: 2vw;
@@ -229,4 +230,31 @@ button {
   width: 100%;
   text-align: center;
   font-weight: 550;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  font-size: 2vw;
+  padding: 0vw 3.5vw;
+}
+.footer div {
+  padding: 2vw 0vw;
+}
+.footer p {
+  font-size: 2vw;
+  padding: 0;
+}
+
+.final {
+  background-color: black;
+  color: rgb(187, 187, 187);
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+.final p {
+  font-size: 1.5vw;
+  margin: 0;
+  padding: 1vw 3.5vw;
 }/*# sourceMappingURL=styles.css.map */

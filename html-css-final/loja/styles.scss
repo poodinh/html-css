@@ -1,13 +1,25 @@
 html{
     background-color: white;
     font-family: "Inter", sans-serif;
-    max-width: 768px; //nao esquecer apagar apos media querys
+}
+:root{
+    $orange-back:rgba(236, 184, 89, 0.555);
+    $white-letter:white;
+}
+body{
+    margin: 0;
+}
+p, span{
+    padding: 2vw;
+    font-size: 4.5vw;
+    font-weight: 500;
 }
 button{
     background-color: rgb(254, 254, 94);
     border: 0px;
-    padding: 16px;
+    padding: 2.5vw 3.5vw;
     border-radius: 8px;
+    font-size: 2.5vw;
 }
 .menu{
     display: flex;
@@ -26,7 +38,6 @@ button{
         flex-direction: column;
         align-items: center;
         gap: 3px;
-        background-color: white; //criar variavel com a cor
         border: 0px;
     }
 }
@@ -48,9 +59,198 @@ button{
         position: absolute;
         bottom: 5%;
         left: 7%;
+        p{
+            color: $white-letter;
+            font-size: 5.5vw;
+            margin: 0px;
+            padding-left: 0px;
+        }
     }
 }
-.banner--text{
-    color: white;
-    font-size: 24px;
+
+.furniture{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--categories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+    &--image{
+        width: calc(50% - 16px);
+        position: relative;
+        img{
+            object-fit: contain;
+            width: 100%;
+        }
+        p{
+            position: absolute;
+            bottom: -2vw;
+            font-size: 1.5vw;
+        }
+    }
+}
+
+.quality{
+    background-color: $orange-back;
+    padding: 5vw;
+    margin-top: 10VW;
+    &--module{
+        img{
+            max-width: 100%;
+            object-fit: contain;
+        }
+        display: flex;
+       p{
+            font-size: 3vw;
+            margin: 0;
+            padding: 0vw 0vw 0vw 3vw;
+        }
+        padding-bottom: 5vw;
+    }
+    :nth-last-child(1){
+        padding-bottom: 0vw;
+    }
+}
+
+.decour{
+    padding-bottom: 7vw;
+    padding-left: 2vw;
+    text-align: center;
+    &--image{
+        display: flex;
+        gap: 3vw;
+        overflow-x: auto;
+        justify-content: flex-start;
+        max-width: 100%;
+        padding-bottom: 1vw;
+    }
+    & ::-webkit-scrollbar {
+        width: 1em;
+      }
+      
+    & ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+      
+    & ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: $orange-back;
+      }
+}
+.ambid{
+    background-color: $orange-back;
+    padding: 5vw 20vw 5vw 5vw;
+    position: relative;
+    .underline {
+        font-size: 3vw;
+        letter-spacing: 3vw;
+        padding-left: 0px;
+        text-decoration: underline;
+    }
+    span{
+        padding: 3vw 0;
+        font-weight: 300;
+        line-height: 2;
+    }
+    .bold{
+        font-weight: bolder;
+    }
+    .borderless{
+        background-color: transparent;
+        font-size: 2.5vw;
+        font-weight: bolder;
+        padding: 2vw 0;
+    }
+    .sofa{
+        height: 50vw;
+    }
+   img{
+        max-width: 75vw;
+        max-height: 75vw;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.examples{
+    text-align: center;
+    &--categories{
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+    &--image{
+        width: calc(50% - 16px);
+        height: auto;
+        img{
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}
+
+.clip{
+    text-align: center;
+    padding: 7vw 10vw;
+    video{
+        padding-bottom: 2vw;
+
+    }
+}
+
+.subscribe{
+    background-color: rgb(66, 66, 66);
+    padding: 3vw 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    input{
+        box-sizing: border-box;
+        background-color: transparent;
+        padding: 2.5vw 3.5vw;
+        border-radius: 8px;
+        font-size: 2vw;
+        width: 100%;
+        text-align: center;
+        color: grey;
+    }
+    button{
+        background-color: rgb(255, 248, 224);
+        padding: 2.5vw 3.5vw;
+        border-radius: 8px;
+        width: 100%;
+        text-align: center;
+        font-weight: 550;
+    }
+}
+.footer{
+    background-color: black;
+    color: $white-letter;
+    font-size: 2vw;
+    padding: 0vw 3.5vw;
+    div{
+        padding: 2vw 0vw;
+    }
+    p{
+        font-size: 2vw;
+        padding: 0;
+    }
+}
+.final{
+    background-color: black;
+    color: rgb(187, 187, 187);
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    p{
+        font-size: 1.5vw;
+        margin: 0;
+        padding: 1vw 3.5vw;
+    }
 }

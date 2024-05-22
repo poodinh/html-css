@@ -65,7 +65,7 @@ img{
 h3{
     text-align: center;
 }
-@media all and (min-width:600px){
+@media all and (min-width:768px){
     .hide{
         display: flex;
         color: yellow;

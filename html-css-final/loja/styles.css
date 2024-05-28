@@ -48,6 +48,9 @@ button {
   min-height: 3px;
   border-radius: 20px;
 }
+.menu--sections {
+  display: none;
+}
 
 .banner {
   width: 100%;
@@ -86,14 +89,19 @@ button {
   position: relative;
 }
 .furniture--image img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 .furniture--image p {
   position: absolute;
   bottom: -2vw;
   font-size: 1.5vw;
+}
+
+.desktop {
+  display: none;
 }
 
 .quality {
@@ -149,10 +157,16 @@ button {
   position: relative;
 }
 .ambid .underline {
-  font-size: 3vw;
-  letter-spacing: 3vw;
   padding-left: 0px;
   text-decoration: underline;
+}
+.ambid .underline span {
+  font-weight: 500;
+  line-height: 3;
+  letter-spacing: 2vw;
+}
+.ambid .underline :nth-last-child(1) {
+  letter-spacing: 0vw;
 }
 .ambid span {
   padding: 3vw 0;
@@ -162,7 +176,7 @@ button {
 .ambid .bold {
   font-weight: bolder;
 }
-.ambid .borderless {
+.ambid button {
   background-color: transparent;
   font-size: 2.5vw;
   font-weight: bolder;
@@ -223,6 +237,12 @@ button {
   text-align: center;
   color: grey;
 }
+.subscribe input::-moz-placeholder {
+  color: white;
+}
+.subscribe input::placeholder {
+  color: white;
+}
 .subscribe button {
   background-color: rgb(255, 248, 224);
   padding: 2.5vw 3.5vw;
@@ -246,15 +266,149 @@ button {
   padding: 0;
 }
 
-.final {
+.term {
   background-color: black;
   color: rgb(187, 187, 187);
   display: flex;
   flex-direction: column;
   gap: 2vw;
 }
-.final p {
+.term p {
   font-size: 1.5vw;
   margin: 0;
   padding: 1vw 3.5vw;
+}
+
+@media all and (min-width: 768px) {
+  .menu--sandwich {
+    display: none;
+  }
+  .menu--sections {
+    display: flex;
+    gap: 2vw;
+  }
+  .menu--sections button {
+    background-color: inherit;
+    font-size: 1vw;
+    padding: 1vw;
+  }
+  .menu--sections--icon {
+    height: 1vw;
+    width: 1vw;
+  }
+  button {
+    padding: 1.5vw 2vw;
+    font-size: 1.25vw;
+  }
+  .banner {
+    background-image: url(./assets/splash-screen.webp);
+  }
+  .banner--info {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+  }
+  .banner--info p {
+    font-size: 2vw;
+  }
+  .furniture--image {
+    width: calc(33.3333% - 16px);
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .quality {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+  }
+  .quality--module {
+    width: 33.3333333333%;
+    align-items: center;
+    padding-bottom: 0vw;
+  }
+  .quality--module p {
+    font-size: 1vw;
+  }
+  .ambid {
+    padding: 5vw 60vw 5vw 5vw;
+  }
+  .ambid .underline span {
+    letter-spacing: 1vw;
+  }
+  .ambid span {
+    font-size: 2vw;
+  }
+  .ambid button {
+    font-size: 1.5vw;
+  }
+  .ambid .sofa {
+    height: 10vw;
+  }
+  .ambid img {
+    max-width: auto;
+    max-height: 100%;
+  }
+  .examples--categories {
+    flex-wrap: nowrap;
+  }
+  .examples--image {
+    width: calc(25% - 16px);
+    height: auto;
+  }
+  .examples--image img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 100%;
+  }
+  .subscribe {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .subscribe--email {
+    display: flex;
+    width: 40vw;
+  }
+  .subscribe--email input {
+    padding: 1.75vw 2.75vw 1.75vw 0.75vw;
+    font-size: 1.25vw;
+    width: 70%;
+    text-align: left;
+    color: white;
+  }
+  .subscribe--email button {
+    padding: 1vw 2vw;
+    width: 30%;
+  }
+  .subscribe--socials {
+    display: flex;
+    gap: 2vw;
+  }
+  .footer {
+    padding: 0vw 1vw;
+    display: flex;
+    font-size: 1.25vw;
+    justify-content: space-between;
+  }
+  .footer p {
+    font-size: 1.25vw;
+  }
+  .term {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1vw;
+  }
+  .term p {
+    font-size: 0.75vw;
+    padding: 0.25vw 1vw;
+  }
+}
+@media all and (min-width: 1290px) {
+  .decour--image {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=styles.css.map */

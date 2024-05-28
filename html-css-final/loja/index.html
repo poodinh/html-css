@@ -19,6 +19,13 @@
             <div class="line"></div>
             <div class="line"></div>
         </button>
+        <div class="menu--sections">
+            <button>Seating <i data-feather="chevron-down" class="menu--sections--icon"></i></button>
+            <button>Living Room <i data-feather="chevron-down" class="menu--sections--icon"></i></button>
+            <button>Outdoor <i data-feather="chevron-down" class="menu--sections--icon"></i></button>
+            <button>Bedroom <i data-feather="chevron-down" class="menu--sections--icon"></i></button>
+            <button>Storage <i data-feather="chevron-down" class="menu--sections--icon"></i></button>
+        </div>
     </div>
     <div class="banner">
         <div class="banner--info">
@@ -31,27 +38,43 @@
         <div class="furniture--categories">
             <div class="furniture--image">
                 <img src="./assets/Rectangle 2.png" alt=""> 
-                <!-- Falta href para a outra página que fizer -->
+                <!-- Falta href para a outra página que fizer na 2 pagina tem hovers das imagens -->
                 <p>Seating</p>
             </div>
-            <div class="furniture--image">
+            <div class="furniture--image mobile">
                 <img src="./assets/Rectangle 3.png" alt="">
                 <p>Outdoor</p>
             </div>
-            <div class="furniture--image">
+            <div class="furniture--image desktop">
+                <img src="./assets/category-outdoor.webp" alt="">
+                <p>Outdoor</p>
+            </div>
+            <div class="furniture--image mobile">
                 <img src="./assets/Rectangle 4.png" alt="">
+                <p>Storage</p>
+            </div>
+            <div class="furniture--image desktop">
+                <img src="./assets/category-storage.webp" alt="">
                 <p>Storage</p>
             </div>
             <div class="furniture--image">
                 <img src="./assets/Rectangle 5.png" alt="">
-                <p>Beds</p>
+                <p>Bedroom</p>
             </div>
-            <div class="furniture--image">
+            <div class="furniture--image mobile">
                 <img src="./assets/Rectangle 6.png" alt="">
                 <p>Tables</p>
             </div>
-            <div class="furniture--image">
+            <div class="furniture--image desktop">
+                <img src="./assets/category-tables.webp" alt="">
+                <p>Tables</p>
+            </div>
+            <div class="furniture--image mobile">
                 <img src="./assets/Rectangle 7.png" alt="">
+                <p>Rugs</p>
+            </div>
+            <div class="furniture--image desktop">
+                <img src="./assets/category-rugs.webp" alt="">
                 <p>Rugs</p>
             </div>
         </div>
@@ -89,10 +112,16 @@
         </div>
     </div>
     <div class="ambid">
-        <p class="underline">NOMAD</p>
-        <span class="bold">The Ambid</span> <span>system works beautifully. It's comfortable, absolutely solid, and looks great.</span>
+        <div class="underline">
+            <span>N</span>
+            <span>O</span>
+            <span>M</span>
+            <span>A</span>
+            <span>D</span>
+        </div>
+        <span class="bold">The Ambid </span> <span>system works beautifully. It's comfortable, absolutely solid, and looks great.</span>
         <div>
-            <button class="borderless">SHOP NOW</button>
+            <button>SHOP NOW</button>
         </div>
         <div class="sofa">
             <img src="./assets/crop-sofa.png" alt="">
@@ -116,14 +145,21 @@
         </div>
     </div>
     <div class="clip">
-        <p>Shop these real-life spaces</p>
+        <p>Modular, easy-to-move-design</p>
         <video src="./assets/background-video.mp4" width="100%" controls></video>
         <button>SHOP SEATING</button>
     </div>
     <div class="subscribe">
+        <div class="subscribe--email">
             <label for="subscription"> </label>
             <input required type="email" id="subscription" name="news-subscribe" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Subscribe for Enthralling Couch Reads">
-            <button class="subscribe--button">SUBSCRIBE</button>
+            <button>SUBSCRIBE</button>
+        </div>
+        <div class="subscribe--socials desktop">
+            <img src="./assets/socials/icons8-youtube.svg" alt="">
+            <img src="./assets/socials/icons8-instagram.svg" alt="">
+            <img src="./assets/socials/icons8-facebook.svg" alt="">
+        </div>
     </div>
     <div class="footer">
         <div class="footer--services">
@@ -160,14 +196,18 @@
             <p>Saturday to Sunday - 10a to 2p EST</p>
         </div>
     </div>
-    <div class="final">
-        <div class="final--template">
+    <div class="term">
+        <div class="term--template">
             <p>@ 2023 Template</p>
             <p>Terms - Acessiblity - Sitemap - Privacy</p>
         </div>
-        <div class="final--adress">
+        <div class="term--adress">
             <p>15 W 27th Street, 9th Floor New York, NY, 10001</p>
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script>
+	feather.replace();
+</script>
 </html>

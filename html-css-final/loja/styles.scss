@@ -1,56 +1,11 @@
-html{
-    background-color: white;
-    font-family: "Inter", sans-serif;
-}
+@use './stylesheets/base.scss';
+@use './stylesheets/menu.scss';
+@use './stylesheets/button.scss';
+@use './stylesheets/product.scss';
+@use './stylesheets/footer.scss';
 
 $orange-back:rgba(236, 184, 89, 0.555);
 $white-letter:white;
-
-body{
-    margin: 0;
-}
-p, span{
-    padding: 2vw;
-    font-size: 4.5vw;
-    font-weight: 500;
-}
-button{
-    background-color: rgb(254, 254, 94);
-    border: 0px;
-    padding: 2.5vw 3.5vw;
-    border-radius: 8px;
-    font-size: 2.5vw;
-}
-.menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2vw 1vw;
-    width: 100%;
-    &--rectangle{
-        border-radius: 8px;
-        background-color: rgba(181, 181, 181, 0.381);
-        width: 95px;
-        min-height: 30px;
-    }
-    &--sandwich{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3px;
-        background-color: inherit;
-        border: 0px;
-        .line{
-            background-color: black;
-            width: 18px;
-            min-height: 3px;
-            border-radius: 20px;
-        }
-    }
-    &--sections{
-        display: none;
-    }
-}
 
 .banner{
     width: 100%;
@@ -73,34 +28,19 @@ button{
     }
 }
 
+.desktop{
+    display: none;
+}
 
-.furniture{ 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &--categories{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-    }
+.product{
     &--image{
-        width: calc(50% - 16px);
         position: relative;
-        img{
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
         p{
             position: absolute;
             bottom: -2vw;
             font-size: 1.5vw;
         }
     }
-}
-.desktop{
-    display: none;
 }
 
 .quality{
@@ -150,6 +90,7 @@ button{
         background: $orange-back;
       }
 }
+
 .ambid{
     background-color: $orange-back;
     padding: 5vw 20vw 5vw 5vw;
@@ -218,83 +159,8 @@ button{
     }
 }
 
-.subscribe{
-    background-color: rgb(66, 66, 66);
-    padding: 3vw 1vw;
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
-    input{
-        box-sizing: border-box;
-        background-color: transparent;
-        padding: 2.5vw 3.5vw;
-        border-radius: 8px;
-        font-size: 2vw;
-        width: 100%;
-        text-align: center;
-        color: grey;
-        &::placeholder{
-            color: white;
-        }
-    }
-    button{
-        background-color: rgb(255, 248, 224);
-        padding: 2.5vw 3.5vw;
-        border-radius: 8px;
-        width: 100%;
-        text-align: center;
-        font-weight: 550;
-    }
-}
-.footer{
-    background-color: black;
-    color: $white-letter;
-    font-size: 2vw;
-    padding: 0vw 3.5vw;
-    div{
-        padding: 2vw 0vw;
-    }
-    p{
-        font-size: 2vw;
-        padding: 0;
-    }
-}
-.term{
-    background-color: black;
-    color: rgb(187, 187, 187);
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
-    p{
-        font-size: 1.5vw;
-        margin: 0;
-        padding: 1vw 3.5vw;
-    }
-}
 
 @media all and (min-width:768px){
-    .menu{
-        &--sandwich{
-            display:none;
-        }
-        &--sections{
-            display: flex;
-            gap: 2vw;
-            button{
-                background-color: inherit;
-                font-size: 1vw;
-                padding: 1vw;
-            }
-            &--icon{
-                height: 1vw;
-                width: 1vw;
-            }
-        }
-    }
-    button{
-        padding: 1.5vw 2vw;
-        font-size: 1.25vw;
-    }
     .banner{
         background-image: url(./assets/splash-screen.webp);
         &--info{
@@ -306,14 +172,10 @@ button{
             }
         }
     }
-    .furniture{ 
-        &--image{
-            width: calc(33.3333% - 16px);
-        }
-    }
     .mobile{
         display: none;
     }
+
     .desktop{
         display: block;
     }
@@ -352,6 +214,7 @@ button{
             max-height: 100%;
         }
     }
+
     .examples{
         &--categories{
             flex-wrap: nowrap;
@@ -365,49 +228,7 @@ button{
             }
         }
     }
-    .subscribe{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        &--email{
-            display: flex;
-            width: 40vw;
-            input{
-                padding: 1.75vw 2.75vw 1.75vw 0.75vw;
-                font-size: 1.25vw;
-                width: 70%;
-                text-align:left;
-                color: white;
-
-            }
-            button{
-                padding: 1vw 2vw;
-                width: 30%;
-            }
-        }
-        &--socials{
-            display: flex;
-            gap: 2vw;
-        }
-    }
-    .footer{
-        padding: 0vw 1vw;
-        display: flex;
-        font-size: 1.25vw;
-        justify-content: space-between;
-        p{
-            font-size: 1.25vw;
-        }
-    }
-    .term{
-        flex-direction: row;
-        justify-content: space-between;
-        padding-bottom: 1vw;
-        p{
-            font-size: 0.75vw;
-            padding: 0.25vw 1vw;
-        }
-    }
+   
 }
 
 @media all and (min-width:1290px){

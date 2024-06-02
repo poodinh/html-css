@@ -1,0 +1,84 @@
+@use './stylesheets/base.scss';
+@use './stylesheets/menu.scss';
+@use './stylesheets/button.scss';
+@use './stylesheets/product.scss';
+@use './stylesheets/footer.scss';
+
+.product{
+    padding-bottom: 3vw;
+    p{
+        margin: 0;
+    }
+    .text{
+        font-size: 1.5vw;
+        text-align: center;
+        padding: 0 2vw 3vw 2vw;
+    }
+    &--image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:0.5vw;
+        p{
+            font-size: 1.5vw;
+            padding: 0vw;
+        }
+        .price{
+            color: rgb(179, 179, 179);
+        }
+    }
+}
+
+.desktop{
+    display: none;
+}
+
+#sofa--1:hover{
+    content: url("./assets/products/1/product-hover.webp");
+}
+
+#sofa--2:hover{
+    content: url("./assets/products/2/product-hover.webp");
+}
+
+#sofa--3:hover{
+    content: url("./assets/products/3/product-hover.webp");
+}
+
+#sofa--4:hover{
+    content: url("./assets/products/4/product-hover.webp");
+}
+
+#sofa--5:hover{
+    content: url("./assets/products/5/product-hover.webp");
+}
+
+#sofa--6:hover{
+    content: url("./assets/products/6/product-hover.webp");
+}
+
+#sofa--7:hover{
+    content: url("./assets/products/7/product-hover.webp");
+}
+
+#sofa--8:hover{
+    content: url("./assets/products/8/product-hover.webp");
+}
+
+#sofa--9:hover{
+    content: url("./assets/products/1/product-hover.webp");
+}
+
+@media all and (min-width:768px) {
+    p{
+        text-align: start;
+    }
+    .desktop{
+        display: flex;
+    }
+    .product{
+        &--image{
+            align-items: flex-start;
+        }
+    }
+}

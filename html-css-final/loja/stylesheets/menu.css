@@ -1,0 +1,49 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 1vw;
+  width: 100%;
+}
+.menu--rectangle {
+  border-radius: 8px;
+  background-color: rgba(181, 181, 181, 0.381);
+  width: 95px;
+  min-height: 30px;
+}
+.menu--sandwich {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background-color: inherit;
+  border: 0px;
+}
+.menu--sandwich .line {
+  background-color: black;
+  width: 18px;
+  min-height: 3px;
+  border-radius: 20px;
+}
+.menu--sections {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  .menu--sandwich {
+    display: none;
+  }
+  .menu--sections {
+    display: flex;
+    gap: 2vw;
+  }
+  .menu--sections button {
+    background-color: inherit;
+    font-size: 1vw;
+    padding: 1vw;
+  }
+  .menu--sections--icon {
+    height: 1vw;
+    width: 1vw;
+  }
+}/*# sourceMappingURL=menu.css.map */

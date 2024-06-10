@@ -7,17 +7,19 @@ body {
   margin: 0;
 }
 
-p, span {
+h2, span {
   padding: 2vw;
   font-size: 4.5vw;
   font-weight: 500;
+  margin: 0;
 }
 
 .menu {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2vw 1vw;
+  padding: 2vw 3vw;
   width: 100%;
 }
 .menu--rectangle {
@@ -208,13 +210,13 @@ button {
 .product {
   padding-bottom: 3vw;
 }
-.product p {
-  margin: 0;
+.product p, .product h2 {
+  padding: 2vw 0vw 2vw 1vw;
 }
-.product .text {
+.product p {
   font-size: 1.5vw;
   text-align: center;
-  padding: 0 2vw 3vw 2vw;
+  margin: 0;
 }
 .product--image {
   display: flex;
@@ -271,13 +273,19 @@ button {
 }
 
 @media all and (min-width: 768px) {
-  p {
-    text-align: start;
-  }
   .desktop {
     display: flex;
   }
+  .product {
+    align-items: flex-start;
+  }
   .product--image {
     align-items: flex-start;
+  }
+  .product p {
+    text-align: start;
+  }
+  .product .text {
+    padding: 0 50vw 3vw 1vw;
   }
 }/*# sourceMappingURL=styles-page-2.css.map */

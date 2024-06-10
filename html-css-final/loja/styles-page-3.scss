@@ -3,3 +3,389 @@
 @use './stylesheets/button.scss';
 @use './stylesheets/product.scss';
 @use './stylesheets/footer.scss';
+
+.desktop{
+    display: none;
+}
+p, h2{
+    padding-left: 0;
+}
+p{
+    font-size: 2vw;
+    margin: 0;
+}
+
+.bold{
+    font-size: 2vw;
+    padding-right: 1vw;
+    font-weight: 700;
+}
+.bigger{
+    font-size: 2.5vw;
+}
+.sofa{
+    padding: 0 3vw 30vw 3vw;
+    position: relative;
+    h1{
+        font-weight: 700;
+        font-size: 3vw;
+    }
+    p{
+        padding: 1vw 0;
+    }
+    &--buy{
+    &--image{
+        img{
+            max-width: 100%;
+        }
+    }
+    &--info{
+        padding-bottom: 5vw;
+        .price{
+            padding-top: 0;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        &--colors{
+
+            .text{
+                display: flex;
+            }
+            
+            input[name="color"]{
+                visibility: hidden;
+                width: 2vw;
+                height: 2vw;
+                border-radius: 2vw;
+                margin: 0;
+            }
+            input[name="color"]::after{
+                width: 2vw;
+                height: 2vw;
+                border-radius: 2vw;
+                position: relative;
+                content: '';
+                display: inline-block;
+                visibility: visible; 
+            }
+                
+            input[id='navieBlue']::after{
+                background-color: navy;
+            }
+                    
+            input[id='green']::after{
+                background-color: green;
+            }
+            
+            input[id='deepRed']::after{
+                background-color: rgb(146, 0, 0);
+            }
+                
+            input[id='deepGreen']::after{
+                background-color: rgb(3, 87, 3);
+            }
+                    
+            input[id='black']::after{
+                background-color: black;
+            }
+                    
+            input[id='grey']::after{
+                background-color: grey;
+            }
+                
+            input[name="color"]:checked:after {
+                width: 2vw;
+                height: 2vw;
+                border-radius: 2vw;
+                position: relative;
+                content: '';
+                display: inline-block;
+                visibility: visible;
+                outline: 0.1vw solid white;
+                box-shadow:0 0 0 0px white, 0 0 0 0.2vw black;                    
+            }
+            //tentativa sem html mas n consegui por as coisas no sítio correto sem martelada
+            // label{
+            //     display: none;
+            //     font-size: 2vw;
+            // }
+            // input[name="color"]:checked + label{
+            //     display: block;
+            // }
+            // #fabricColor{
+            //     order: 0;
+            // }
+            // .selector{
+            //     order: 1;
+            // }
+            // input[name="color"]{
+            //     order: 2;
+            // }
+        }
+        &--upgrades{
+            .check{
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+            &--group{
+                display: flex;
+                gap: 1vw;
+                align-items: center;
+                label{
+                    font-size: 2vw;
+                    color: rgb(160, 160, 160);
+                }
+                input[name="upgrade"]{
+                    width: 3vw;
+                    height: 3vw;
+                    border-radius: 1vw;
+                    margin: 0;
+                }
+            }
+            }
+        }
+    }
+}
+    button{
+        position: absolute;
+        right: 3vw;
+    }
+}
+
+.dimensions{
+    padding: 0 3vw;
+    p{
+        color: rgb(160, 160, 160);
+    }
+    .line{
+        width: 100%;
+        height: 1px;
+        background-color:  rgb(160, 160, 160);
+    }
+    img{
+        max-width: 100%;
+    }
+    img:hover{
+        content: url(./assets/product-details.webp);
+        
+    }
+}
+.about{
+    padding: 0 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    &--caract{
+        p{
+            padding-bottom: 1vw;
+        }
+    }
+}
+.feature{
+    padding: 0 3vw 3vw 3vw;
+    text-align: center;
+    &--images{
+        display: flex;
+        flex-wrap: wrap;
+        .key{
+            width: calc(50% - 3vw);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.video{
+    padding: 0 3vw;
+    video{
+        max-width: 100%;
+    }
+    p{
+        padding-bottom: 1.5vw;
+    }
+}
+
+.recommendation{
+    padding: 0 3vw 3vw 3vw;
+    text-align: center;
+    &--image--single{
+        padding-bottom: 1vw;
+        display: flex;
+        flex-direction: column;
+        gap:1vw;
+        img{
+            max-width: 100%;
+        }
+        .price{
+            color: rgb(179, 179, 179);
+        }
+    }
+}
+
+#sofa--2:hover{
+    content: url("./assets/products/2/product-hover.webp");
+}
+
+#sofa--3:hover{
+    content: url("./assets/products/3/product-hover.webp");
+}
+
+#sofa--4:hover{
+    content: url("./assets/products/4/product-hover.webp");
+}
+
+@media all and (min-width:768px) {
+    h1{
+        font-size: 2vw;
+    }
+    h2{
+        font-size: 3vw;
+    }
+    p{
+        font-size: 1vw;
+    }
+    .desktop{
+        display: block;
+    }
+    .bold{
+        font-size: 1vw;
+    }
+    .bigger{
+        font-size: 1.5vw;
+    }
+    .sofa{
+        padding: 0 3vw;
+        &--buy{
+            &--image{
+                max-width: 60%;
+            }
+            display: flex;
+            gap: 2vw;
+            &--info{
+                h2{
+                    padding: 0;
+                }
+                .text{
+                    p{
+                        padding: 0;
+                    }
+                }
+                input[name="color"]{
+                    width: 1vw;
+                    height: 1vw;
+                    border-radius: 1vw;
+                }
+                input[name="color"]::after{
+                    width: 1vw;
+                    height: 1vw;
+                    border-radius: 1vw;
+                }
+                input[name="color"]:checked:after {
+                    width: 1vw;
+                    height: 1vw;
+                    border-radius: 1vw;
+                    outline: 0.05vw solid white;
+                    box-shadow:0 0 0 0px white, 0 0 0 0.1vw black;
+                }      
+                &--upgrades{
+                    .check{
+                        &--group{
+                            label{
+                                font-size: 1vw;
+                                color: rgb(160, 160, 160);
+                            }
+                            input[name="upgrade"]{
+                                width: 2vw;
+                                height: 2vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            bottom: 0vw;
+        }    
+    }
+    .dimensions{
+        padding-top: 3vw;
+        display: flex;
+        gap: 1vw;
+        &--specifics{
+            width: 50%;
+            .separate{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        img{
+            max-width: 50%;
+        }      
+    }
+    .about{
+        .bigger{
+            padding-bottom: 1vw;
+        }
+        &--caract{
+            display: flex;
+            &--text{
+                .bold{
+                    padding-bottom: 0.5vw;
+                }
+                max-width: calc(100% / 3);
+            }
+        }
+    }
+    .feature{
+        text-align: left;
+        &--images{
+            justify-content: space-between;
+            .key{
+                width: calc(100% / 5 - 3vw);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .video{
+        h2{
+            padding: 0;
+        }
+        p{
+            padding: 0.5vw 0;
+        }
+        &--group{
+            padding: 2vw 0;
+            display: flex;
+            gap: 2vw;
+            &--video{
+                max-width: 50%;
+                object-fit: fill;
+            }
+            &--text{
+                max-width: 50%;
+                &--characteristics{
+                    display: flex;
+                    gap: 2vw;
+                }
+            }
+        }
+    }
+    .recommendation{
+
+        &--image{
+            display: flex;
+            flex-direction: row;
+            gap:1vw;
+        }
+    }
+}

@@ -1,8 +1,9 @@
 .menu{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vw 1vw;
+    padding: 2vw 3vw;
     width: 100%;
     &--rectangle{
         border-radius: 8px;

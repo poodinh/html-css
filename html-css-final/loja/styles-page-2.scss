@@ -6,13 +6,13 @@
 
 .product{
     padding-bottom: 3vw;
-    p{
-        margin: 0;
+    p, h2{
+        padding: 2vw 0vw 2vw 1vw;
     }
-    .text{
+    p{
         font-size: 1.5vw;
         text-align: center;
-        padding: 0 2vw 3vw 2vw;
+        margin: 0;
     }
     &--image{
         display: flex;
@@ -70,15 +70,20 @@
 }
 
 @media all and (min-width:768px) {
-    p{
-        text-align: start;
-    }
+    
     .desktop{
         display: flex;
     }
     .product{
+        align-items: flex-start;
         &--image{
             align-items: flex-start;
+        }
+        p{
+            text-align: start;
+        }
+        .text{
+            padding: 0 50vw 3vw 1vw;
         }
     }
 }
